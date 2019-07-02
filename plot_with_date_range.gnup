@@ -1,0 +1,10 @@
+set datafile separator ","
+set xdata time
+set timefmt "%m/%d/%Y"
+set xrange ["06/25/2019":"07/02/2019"]
+show xrange
+set timefmt "%s"
+show xrange
+set format x "%m/%d"
+plot 'free.txt' using 1:9
+pause -1 "Hit any key to continue"

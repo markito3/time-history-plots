@@ -1,0 +1,6 @@
+set datafile separator ","
+set xdata time
+set timefmt "%s"
+set format x "%m/%d"
+plot 'free.txt' using 1:9
+pause -1 "Hit any key to continue"
