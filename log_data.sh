@@ -1,2 +1,2 @@
 #!/bin/bash
-loop.csh 900 stripchart.py
+loop.csh 900 free.py
