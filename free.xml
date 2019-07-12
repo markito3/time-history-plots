@@ -3,6 +3,6 @@
   <columns>
     <column name="swap used" position="12"/>
   </columns>
-  <time_scale units="days"/>
+  <time_scale scale="few days"/>
   <time_range type="latest" duration="5"/>
 </time_history_plot>
