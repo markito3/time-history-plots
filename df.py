@@ -14,7 +14,7 @@ a = line.split()
 wsize = a[1]
 wused = a[2]
 wavail = a[3]
-print(now, gsize, gused, gavail, wsize, wused, wavail)
+#print(now, gsize, gused, gavail, wsize, wused, wavail)
 file_out = open("df.txt", "a+")
 file_out.write("%s,%s,%s,%s,%s,%s,%s\n" % (now, gsize, gused, gavail, wsize, wused, wavail))
 file_out.close()
