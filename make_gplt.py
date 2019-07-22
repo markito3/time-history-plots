@@ -1,11 +1,15 @@
 #!/bin/env python
+
+import sys
 import time
 from xml.dom.minidom import parse
 import xml.dom.minidom
 
+configFile = sys.argv[1]
+
 now = time.time()
 
-DOMTree = xml.dom.minidom.parse('free.xml')
+DOMTree = xml.dom.minidom.parse(configFile)
 plotConfig = DOMTree.documentElement
 input_data = plotConfig.getElementsByTagName('input_data')
 id_element = input_data[0] # first one and first one only
