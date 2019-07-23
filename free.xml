@@ -1,8 +1,18 @@
 <time_history_plot>
   <input_data file="free.txt"/>
   <columns>
-    <column name="swap used" position="12"/>
+    <column name="time" position="1"/>
+    <column name="mem total" position="2"/>
+    <column name="mem used" position="3"/>
+    <column name="mem free" position="4"/>
+    <column name="mem shared" position="5"/>
+    <column name="mem buff/cache" position="6"/>
+    <column name="mem available" position="7"/>
+    <column name="swap total" position="8"/>
+    <column name="swap used" position="9"/>
+    <column name="swap free" position="10"/>
   </columns>
   <time_scale scale="few days"/>
   <time_range type="latest" duration="5"/>
+  <plot x="time" y="swap free"/>
 </time_history_plot>
