@@ -24,6 +24,18 @@ time_end = now
 tu = 24*60*60
 time_start = time_end - duration*tu
 
+columns_array = plotConfig.getElementsByTagName('columns')
+columns_node = columns_array[0] # first one and first one only
+column_array = columns_node.getElementsByTagName('column')
+position_dict = {}
+for i in range(column_array.length):
+    position_dict[column_array[i].getAttribute('name')] = column_array[i].getAttribute('position')
+
+plot_array = plotConfig.getElementsByTagName('plot')
+plot_node = plot_array[0]
+xcolname = plot_node.getAttribute('x')
+ycolname = plot_node.getAttribute('y')
+
 print 'set datafile separator ","'
 print 'set xdata time'
 print 'set timefmt "%s"'
@@ -32,5 +44,5 @@ if scale == 'few days':
     print 'set format x "%dd%Hh"'
 else:
     print 'set format x "%m/%d"'
-print 'plot \'' + data_file + '\' using 1:9'
+print 'plot \'' + data_file + '\' using ' + position_dict[xcolname] + ':' + position_dict[ycolname]
 print 'pause -1 "Hit any key to continue"'
