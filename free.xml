@@ -14,5 +14,5 @@
   </columns>
   <time_scale scale="few days"/>
   <time_range type="latest" duration="5"/>
-  <plot x="time" y="swap free"/>
+  <plot x="time" y="swap used"/>
 </time_history_plot>
