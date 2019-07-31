@@ -9,11 +9,27 @@ configFile = sys.argv[1]
 
 now = time.time()
 
-DOMTree = xml.dom.minidom.parse(configFile)
-plotConfig = DOMTree.documentElement
-input_data = plotConfig.getElementsByTagName('input_data')
-id_element = input_data[0] # first one and first one only
-data_file = id_element.getAttribute('file')
+def get_data_specs():
+    DOMTreeData = xml.dom.minidom.parse(input_data_spec_file)
+    dataConfig = DOMTreeData.documentElement
+    input_data_array = dataConfig.getElementsByTagName('input_data')
+    input_data = input_data_array[0] # first one and first one only
+    global data_file
+    data_file = input_data.getAttribute('file')
+    columns_array = dataConfig.getElementsByTagName('columns')
+    columns_node = columns_array[0] # first one and first one only
+    column_array = columns_node.getElementsByTagName('column')
+    global position_dict
+    position_dict = {}
+    for i in range(column_array.length):
+        position_dict[column_array[i].getAttribute('name')] = column_array[i].getAttribute('position')
+
+DOMTreePlot = xml.dom.minidom.parse(configFile)
+plotConfig = DOMTreePlot.documentElement
+input_data_spec_array = plotConfig.getElementsByTagName('input_data_spec')
+input_data_spec = input_data_spec_array[0] # first one and first one only
+input_data_spec_file = input_data_spec.getAttribute('file')
+get_data_specs()
 time_scale = plotConfig.getElementsByTagName('time_scale')
 ts_element = time_scale[0] # first one and first one only
 scale = ts_element.getAttribute('scale')
@@ -23,13 +39,6 @@ duration = float(tr_element.getAttribute('duration'))
 time_end = now
 tu = 24*60*60
 time_start = time_end - duration*tu
-
-columns_array = plotConfig.getElementsByTagName('columns')
-columns_node = columns_array[0] # first one and first one only
-column_array = columns_node.getElementsByTagName('column')
-position_dict = {}
-for i in range(column_array.length):
-    position_dict[column_array[i].getAttribute('name')] = column_array[i].getAttribute('position')
 
 plot_array = plotConfig.getElementsByTagName('plot')
 plot_node = plot_array[0]

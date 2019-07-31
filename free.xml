@@ -1,4 +1,4 @@
-<time_history_plot>
+<time_history_data>
   <input_data file="free.txt"/>
   <columns>
     <column name="time" position="1"/>
@@ -12,7 +12,4 @@
     <column name="swap used" position="9"/>
     <column name="swap free" position="10"/>
   </columns>
-  <time_scale scale="few days"/>
-  <time_range type="latest" duration="5"/>
-  <plot x="time" y="swap used"/>
-</time_history_plot>
+</time_history_data>
