@@ -1,7 +1,7 @@
 <time_history_plot>
   <input_data_spec file="free.xml"/>
-  <time_scale scale="few days"/>
-  <time_range type="latest" duration="5"/>
-  <plot x="time" y="swap used"/>
+  <time_scale scale="weeks"/>
+  <time_range type="end" offset="-1" duration="2"/>
+  <plot x="time" y="swap free"/>
   <time_zone offset="-04:00"/>
 </time_history_plot>

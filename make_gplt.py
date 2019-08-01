@@ -35,6 +35,8 @@ ts_element = time_scale[0] # first one and first one only
 scale = ts_element.getAttribute('scale')
 time_range = plotConfig.getElementsByTagName('time_range')
 tr_element = time_range[0] # first one and first one only
+range_type = tr_element.getAttribute('type')
+range_offset = float(tr_element.getAttribute('offset'))
 duration = float(tr_element.getAttribute('duration'))
 time_zone_array = plotConfig.getElementsByTagName('time_zone')
 
@@ -53,9 +55,6 @@ if len(time_zone_array) > 0:
     offset_seconds = sign_factor*60*(60*hours + minutes)
 else:
     offset_seconds = 0
-time_end = now
-tu = 24*60*60
-time_start = time_end - duration*tu
 
 plot_array = plotConfig.getElementsByTagName('plot')
 plot_node = plot_array[0]
@@ -67,11 +66,41 @@ print 'set key box'
 print 'set grid'
 print 'set xdata time'
 print 'set timefmt "%s"'
-print 'set xrange ["' + str(time_start) + '":"' + str(time_end) + '"]'
-if scale == 'few days':
+if scale == 'seconds':
+    tu = 1
+    print 'set format x "%S"'
+elif scale == 'minutes':
+    tu = 60
+    print 'set format x "%M:%S"'
+elif scale == 'hours':
+    tu = 60*60
+    print 'set format x "%H:%M"'
+elif scale == 'days':
+    tu = 24*60*60
     print 'set format x "%dd%Hh"'
+elif scale == 'weeks':
+    tu = 7*24*60*60
+    print 'set format x "%m/%d"'
+elif scale == 'months':
+    tu = 30*24*60*60
+    print 'set format x "%m/%d/%y"'
+elif scale == 'years':
+    tu = 365*24*60*60
+    print 'set format x "%m/%y"'
 else:
     print 'set format x "%m/%d"'
+if range_type == 'latest':
+    time_end = now + offset_seconds
+    time_start = time_end - duration*tu
+elif range_type == 'start':
+    time_start = now + offset_seconds + range_offset*tu
+    time_end = time_start + duration*tu
+elif range_type == 'end':
+    time_end = now + offset_seconds + range_offset*tu
+    time_start = time_end - duration*tu
+else:
+    sys.exit('bad range type')
+print 'set xrange ["' + str(time_start) + '":"' + str(time_end) + '"]'
 xcol = position_dict[xcolname]
 ycol = position_dict[ycolname]
 if xcolname == 'time':
