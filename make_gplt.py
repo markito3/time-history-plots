@@ -63,6 +63,8 @@ xcolname = plot_node.getAttribute('x')
 ycolname = plot_node.getAttribute('y')
 
 print 'set datafile separator ","'
+print 'set key box'
+print 'set grid'
 print 'set xdata time'
 print 'set timefmt "%s"'
 print 'set xrange ["' + str(time_start) + '":"' + str(time_end) + '"]'
@@ -74,5 +76,5 @@ xcol = position_dict[xcolname]
 ycol = position_dict[ycolname]
 if xcolname == 'time':
     xcol = '(' + '$' + xcol + '+('+ str(offset_seconds) + '))'
-print 'plot \'' + data_file + '\' using ' + xcol + ':' + ycol
+print 'plot \'' + data_file + '\' using ' + xcol + ':' + ycol + ' title "' + ycolname + '"'
 print 'pause -1 "Hit any key to continue"'
