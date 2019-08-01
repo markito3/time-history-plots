@@ -36,6 +36,23 @@ scale = ts_element.getAttribute('scale')
 time_range = plotConfig.getElementsByTagName('time_range')
 tr_element = time_range[0] # first one and first one only
 duration = float(tr_element.getAttribute('duration'))
+time_zone_array = plotConfig.getElementsByTagName('time_zone')
+
+if len(time_zone_array) > 0:
+    time_zone = time_zone_array[0]
+    offset = time_zone.getAttribute('offset')
+    sign = offset[0]
+    if sign == '+':
+        sign_factor = 1
+    elif sign == '-':
+        sign_factor = -1
+    else:
+        sys.exit('time zone not well-formed, "-05:00" is an example of a good one')
+    hours = float(offset[1:3])
+    minutes = float(offset[4:6])
+    offset_seconds = sign_factor*60*(60*hours + minutes)
+else:
+    offset_seconds = 0
 time_end = now
 tu = 24*60*60
 time_start = time_end - duration*tu
@@ -53,5 +70,9 @@ if scale == 'few days':
     print 'set format x "%dd%Hh"'
 else:
     print 'set format x "%m/%d"'
-print 'plot \'' + data_file + '\' using ' + position_dict[xcolname] + ':' + position_dict[ycolname]
+xcol = position_dict[xcolname]
+ycol = position_dict[ycolname]
+if xcolname == 'time':
+    xcol = '(' + '$' + xcol + '+('+ str(offset_seconds) + '))'
+print 'plot \'' + data_file + '\' using ' + xcol + ':' + ycol
 print 'pause -1 "Hit any key to continue"'
