@@ -1,0 +1,20 @@
+<time_history_data>
+  <input_data file="/work/halld/home/marki/jobstat.txt"/>
+  <columns>
+    <column name="time" position="1"/>
+    <column name="total" position="2"/>
+    <column name="production" position="3"/>
+    <column name="general" position="4"/>
+    <column name="priority" position="5"/>
+    <column name="all gxproj" position="6"/>
+    <column name="gxproj1" position="7"/>
+    <column name="gxproj2" position="8"/>
+    <column name="gxproj3" position="9"/>
+    <column name="gxproj4" position="10"/>
+    <column name="gxproj5" position="11"/>
+    <column name="gxproj6" position="12"/>
+    <column name="gxproj7" position="13"/>
+    <column name="gxproj8" position="14"/>
+    <column name="halld users" position="15"/>
+  </columns>
+</time_history_data>

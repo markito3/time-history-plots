@@ -36,7 +36,7 @@ scale = ts_element.getAttribute('scale')
 time_range = plotConfig.getElementsByTagName('time_range')
 tr_element = time_range[0] # first one and first one only
 range_type = tr_element.getAttribute('type')
-range_offset = float(tr_element.getAttribute('offset'))
+range_offset_raw = tr_element.getAttribute('offset')
 duration = float(tr_element.getAttribute('duration'))
 time_zone_array = plotConfig.getElementsByTagName('time_zone')
 
@@ -68,16 +68,16 @@ print 'set xdata time'
 print 'set timefmt "%s"'
 if scale == 'seconds':
     tu = 1
-    print 'set format x "%S"'
+    print 'set format x "%M%S"'
 elif scale == 'minutes':
     tu = 60
-    print 'set format x "%M:%S"'
+    print 'set format x "%H:%M"'
 elif scale == 'hours':
     tu = 60*60
     print 'set format x "%H:%M"'
 elif scale == 'days':
     tu = 24*60*60
-    print 'set format x "%dd%Hh"'
+    print 'set format x "%d %Hh"'
 elif scale == 'weeks':
     tu = 7*24*60*60
     print 'set format x "%m/%d"'
