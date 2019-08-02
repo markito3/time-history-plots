@@ -1,7 +1,7 @@
 <time_history_plot>
   <input_data_spec file="jobstat.xml"/>
-  <time_scale scale="minutes"/>
-  <time_range type="latest" duration="30"/>
+  <time_scale scale="hours"/>
+  <time_range type="latest" duration="4"/>
   <plot x="time" y="total"/>
   <time_zone offset="-04:00"/>
 </time_history_plot>
