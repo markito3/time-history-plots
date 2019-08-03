@@ -2,7 +2,7 @@
 time=`date +%s`
 jsout=/tmp/jobstat_output.txt
 rm -f $jsout
-jobstat | grep -v JOB_ID > $jsout
+/site/bin/jobstat | grep -v JOB_ID > $jsout
 total=`grep ' R ' $jsout | wc -l`
 production=`grep ' R ' $jsout | grep production | wc -l`
 general=`grep ' R ' $jsout | grep general | wc -l`
