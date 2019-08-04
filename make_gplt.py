@@ -4,10 +4,12 @@ import sys
 import time
 from xml.dom.minidom import parse
 import xml.dom.minidom
+import os.path
 
 configFile = sys.argv[1]
 
 now = time.time()
+data_file = ''
 
 def get_data_specs():
     DOMTreeData = xml.dom.minidom.parse(input_data_spec_file)
@@ -16,6 +18,9 @@ def get_data_specs():
     input_data = input_data_array[0] # first one and first one only
     global data_file
     data_file = input_data.getAttribute('file')
+    if not os.path.isfile(data_file):
+        sys.stderr.write('Error: data file ' + data_file + ' requested in ' + input_data_spec_file + ' does not exist or is not a regular file\n')
+        sys.exit(1)
     columns_array = dataConfig.getElementsByTagName('columns')
     columns_node = columns_array[0] # first one and first one only
     column_array = columns_node.getElementsByTagName('column')

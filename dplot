@@ -2,4 +2,8 @@
 date=`date +%N`
 gplt_file=/tmp/${USER}_${date}.gplt
 make_gplt.py $1 > $gplt_file
-gnuplot $gplt_file
+status=$?
+if [ $status -eq 0 ]
+   then
+   gnuplot $gplt_file
+fi
