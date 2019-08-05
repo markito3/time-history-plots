@@ -1,7 +1,12 @@
 <time_history_plot>
   <input_data_spec file="jobstat.xml"/>
-  <time_scale scale="hours"/>
-  <time_range type="latest" duration="4"/>
-  <plot x="time" y="total"/>
+  <time_scale scale="days"/>
+  <time_range type="latest" duration="3"/>
   <time_zone offset="-04:00"/>
+  <plot x="time" y="total"/>
+  <plot x="time" y="production"/>
+  <plot x="time" y="general"/>
+  <plot x="time" y="priority"/>
+  <plot x="time" y="all gxproj"/>
+  <plot x="time" y="halld users"/>
 </time_history_plot>

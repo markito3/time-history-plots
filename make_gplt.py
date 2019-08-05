@@ -61,11 +61,6 @@ if len(time_zone_array) > 0:
 else:
     offset_seconds = 0
 
-plot_array = plotConfig.getElementsByTagName('plot')
-plot_node = plot_array[0]
-xcolname = plot_node.getAttribute('x')
-ycolname = plot_node.getAttribute('y')
-
 print 'set datafile separator ","'
 print 'set key box'
 print 'set grid'
@@ -106,9 +101,19 @@ elif range_type == 'end':
 else:
     sys.exit('bad range type')
 print 'set xrange ["' + str(time_start) + '":"' + str(time_end) + '"]'
-xcol = position_dict[xcolname]
-ycol = position_dict[ycolname]
-if xcolname == 'time':
-    xcol = '(' + '$' + xcol + '+('+ str(offset_seconds) + '))'
-print 'plot \'' + data_file + '\' using ' + xcol + ':' + ycol + ' title "' + ycolname + '"'
+
+plotCommand =  'plot '
+plot_array = plotConfig.getElementsByTagName('plot')
+for j in range(plot_array.length): 
+    plot_node = plot_array[j]
+    xcolname = plot_node.getAttribute('x')
+    ycolname = plot_node.getAttribute('y')
+    xcol = position_dict[xcolname]
+    ycol = position_dict[ycolname]
+    if xcolname == 'time':
+        xcol = '(' + '$' + xcol + '+('+ str(offset_seconds) + '))'
+    if j != 0:
+        plotCommand += ','
+    plotCommand += '\'' + data_file + '\' using ' + xcol + ':' + ycol + ' title \'' + ycolname + '\''
+print plotCommand
 print 'pause -1 "Hit any key to continue"'
