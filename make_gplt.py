@@ -113,10 +113,13 @@ for j in range(plot_array.length):
     scale = plot_node.getAttribute('scale')
     if scale == '':
         scale = '1.0'
+    key = plot_node.getAttribute('key')
+    if key == '':
+        key = ycolname
     if xcolname == 'time':
         xcol = '(' + '$' + xcol + '+('+ str(offset_seconds) + '))'
     if j != 0:
         plotCommand += ','
-    plotCommand += '\'' + data_file + '\' using ' + xcol + ':(' + scale + '*$' + ycol + ') title \'' + ycolname + '\''
+    plotCommand += '\'' + data_file + '\' using ' + xcol + ':(' + scale + '*$' + ycol + ') title \'' + key + '\''
 print plotCommand
 print 'pause -1 "Hit any key to continue"'
