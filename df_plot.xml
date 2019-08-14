@@ -1,0 +1,9 @@
+<time_history_plot>
+  <input_data_spec file="df.xml"/>
+  <time_scale scale="days"/>
+  <time_range type="latest" duration="3"/>
+  <plot x="time" y="work size" scale="1.07e-9" key="total size (TB)"/>
+  <plot x="time" y="work used" scale="1.07e-9" key="used (TB)"/>
+  <plot x="time" y="work avail" scale="1.07e-9" key="free (TB)"/>
+  <time_zone offset="-04:00"/>
+</time_history_plot>
