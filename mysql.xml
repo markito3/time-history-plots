@@ -1,8 +1,10 @@
 <time_history_plot>
   <input_data file="mysql.txt"/>
   <columns>
-    <column name="total connections" position="3"/>
+    <column name="time" position="1"/>
+    <column name="hallddb" position="2"/>
+    <column name="ccdb" position="3"/>
+    <column name="hallddb-ext" position="4"/>
+    <column name="halldweb" position="5"/>
   </columns>
-  <time_scale scale="few days"/>
-  <time_range type="latest" duration="5"/>
 </time_history_plot>
