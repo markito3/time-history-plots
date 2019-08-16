@@ -1,7 +1,7 @@
 <time_history_plot>
   <input_data_spec file="lustre.xml"/>
-  <time_scale scale="minutes"/>
-  <time_range type="latest" duration="30"/>
+  <time_scale scale="hours"/>
+  <time_range type="latest" duration="3"/>
   <plot x="time" y="cache cached" scale="9.09495e-13" key="cache used (TB)"/>
   <time_zone offset="-04:00"/>
 </time_history_plot>
