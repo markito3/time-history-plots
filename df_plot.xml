@@ -1,7 +1,7 @@
 <time_history_plot>
   <input_data_spec file="df.xml"/>
-  <time_scale scale="days"/>
-  <time_range type="latest" duration="3"/>
+  <time_scale scale="weeks"/>
+  <time_range type="latest" duration="2"/>
   <plot x="time" y="work size" scale="9.31e-10" key="total size (TB)"/>
   <plot x="time" y="work used" scale="9.31e-10" key="used (TB)"/>
   <plot x="time" y="work avail" scale="9.31e-10" key="free (TB)"/>
