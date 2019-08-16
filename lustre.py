@@ -21,7 +21,6 @@ result = cursor.fetchall()
 
 line = result[0];
 for x in line:
-  print(x)
   data_line += ',' + str(x)
 
 cursor.execute('select reserved,quota,cached,smallFile,fileCount from projectDisk where root = "/volatile/halld"')
@@ -30,10 +29,7 @@ result = cursor.fetchall()
 
 line = result[0];
 for x in line:
-  print(x)
   data_line += ',' + str(x)
-
-print (data_line)
 
 file_out = open("lustre.txt", "a+")
 file_out.write("%s\n" % data_line)
