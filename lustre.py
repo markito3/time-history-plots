@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 import mysql.connector
+import time
+
+now = time.time()
 
 db = mysql.connector.connect(
   host="scidbw.jlab.org",
@@ -7,6 +10,8 @@ db = mysql.connector.connect(
   passwd="",
   database="wdm"
 )
+
+data_line = str(now)
 
 cursor = db.cursor()
 
@@ -17,6 +22,7 @@ result = cursor.fetchall()
 line = result[0];
 for x in line:
   print(x)
+  data_line += ',' + str(x)
 
 cursor.execute('select reserved,quota,cached,smallFile,fileCount from projectDisk where root = "/volatile/halld"')
 
@@ -25,6 +31,10 @@ result = cursor.fetchall()
 line = result[0];
 for x in line:
   print(x)
+  data_line += ',' + str(x)
 
+print (data_line)
 
-#select sum(size)/1024/1024/1024/1024 from file,directory where file.dir_index = directory.dir_index and full_path like "/cache/halld/%" and file.owner != 'halldata' and file.owner != 'jasmine' and isCached = 1;
+file_out = open("lustre.txt", "a+")
+file_out.write("%s\n" % data_line)
+file_out.close()

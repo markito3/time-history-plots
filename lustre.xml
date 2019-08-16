@@ -1,0 +1,18 @@
+<time_history_data>
+  <input_data file="lustre.txt"/>
+  <columns>
+    <column name="time" position="1"/>
+    <column name="cache reserved" position="2"/>
+    <column name="cache quota" position="3"/>
+    <column name="cache pin_quota" position="4"/>
+    <column name="cache cached" position="5"/>
+    <column name="cache taped" position="6"/>
+    <column name="cache pinned" position="7"/>
+    <column name="cache smallFile" position="8"/>
+    <column name="volatile reserved" position="9"/>
+    <column name="volatile quota" position="10"/>
+    <column name="volatile cached" position="11"/>
+    <column name="volatile smallFile" position="12"/>
+    <column name="volatile fileCount" position="13"/>
+  </columns>
+</time_history_data>
