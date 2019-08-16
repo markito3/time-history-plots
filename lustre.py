@@ -10,11 +10,20 @@ db = mysql.connector.connect(
 
 cursor = db.cursor()
 
-cursor.execute('select sum(size)/1024.0/1024.0/1024.0/1024.0 from vfile where grp like "halld%"')
+cursor.execute('select reserved,quota,pin_quota,cached,taped,pinned,smallFile from projectDisk where root = "/cache/halld"')
 
-myresult = mycursor.fetchall()
+result = cursor.fetchall()
 
-for x in myresult:
+line = result[0];
+for x in line:
+  print(x)
+
+cursor.execute('select reserved,quota,cached,smallFile,fileCount from projectDisk where root = "/volatile/halld"')
+
+result = cursor.fetchall()
+
+line = result[0];
+for x in line:
   print(x)
 
 
