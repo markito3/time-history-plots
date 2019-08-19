@@ -77,7 +77,7 @@ elif scale == 'hours':
     print 'set format x "%H:%M"'
 elif scale == 'days':
     tu = 24*60*60
-    print 'set format x "%d %Hh"'
+    print 'set format x "%m/%d %Hh"'
 elif scale == 'weeks':
     tu = 7*24*60*60
     print 'set format x "%m/%d"'
