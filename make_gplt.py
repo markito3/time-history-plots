@@ -77,7 +77,7 @@ elif scale == 'hours':
     print 'set format x "%H:%M"'
 elif scale == 'days':
     tu = 24*60*60
-    print 'set format x "%m/%d %Hh"'
+    print 'set format x "%d %Hh"'
 elif scale == 'weeks':
     tu = 7*24*60*60
     print 'set format x "%m/%d"'
@@ -121,5 +121,13 @@ for j in range(plot_array.length):
     if j != 0:
         plotCommand += ','
     plotCommand += '\'' + data_file + '\' using ' + xcol + ':(' + scale + '*$' + ycol + ') title \'' + key + '\''
-print plotCommand
-print 'pause -1 "Hit any key to continue"'
+    print plotCommand
+    print 'pause -1 "Hit any key to continue"'
+output_array = plotConfig.getElementsByTagName('output')
+if output_array.length > 0:
+    output_node = output_array[0]
+    output_type = output_node.getAttribute('type')
+    output_file = output_node.getAttribute('file')
+    print 'set term ' + output_type
+    print 'set output \'' + output_file + '\''
+    print plotCommand
