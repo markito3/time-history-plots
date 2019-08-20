@@ -4,4 +4,5 @@
   <time_range type="latest" duration="7"/>
   <plot x="time" y="swap used"/>
   <time_zone offset="-04:00"/>
+  <output type="png" file="swap.png"/>
 </time_history_plot>

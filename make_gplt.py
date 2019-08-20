@@ -6,7 +6,14 @@ from xml.dom.minidom import parse
 import xml.dom.minidom
 import os.path
 
-configFile = sys.argv[1]
+if sys.argv[1] == '-b':
+    # batch mode
+    batch_mode = True
+    configFile = sys.argv[2]
+else:
+    # interactive mode
+    batch_mode = False
+    configFile = sys.argv[1]
 
 now = time.time()
 data_file = ''
@@ -77,7 +84,7 @@ elif scale == 'hours':
     print 'set format x "%H:%M"'
 elif scale == 'days':
     tu = 24*60*60
-    print 'set format x "%m/%d %Hh"'
+    print 'set format x "%d %Hh"'
 elif scale == 'weeks':
     tu = 7*24*60*60
     print 'set format x "%m/%d"'
@@ -121,5 +128,14 @@ for j in range(plot_array.length):
     if j != 0:
         plotCommand += ','
     plotCommand += '\'' + data_file + '\' using ' + xcol + ':(' + scale + '*$' + ycol + ') title \'' + key + '\''
-print plotCommand
-print 'pause -1 "Hit any key to continue"'
+    if not batch_mode:
+        print plotCommand
+        print 'pause -1 "Hit any key to continue"'
+output_array = plotConfig.getElementsByTagName('output')
+if output_array.length > 0:
+    output_node = output_array[0]
+    output_type = output_node.getAttribute('type')
+    output_file = output_node.getAttribute('file')
+    print 'set term ' + output_type
+    print 'set output \'' + output_file + '\''
+    print plotCommand
