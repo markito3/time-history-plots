@@ -128,9 +128,9 @@ for j in range(plot_array.length):
     if j != 0:
         plotCommand += ','
     plotCommand += '\'' + data_file + '\' using ' + xcol + ':(' + scale + '*$' + ycol + ') title \'' + key + '\''
-    if not batch_mode:
-        print plotCommand
-        print 'pause -1 "Hit any key to continue"'
+if not batch_mode:
+    print plotCommand
+    print 'pause -1 "Hit any key to continue"'
 output_array = plotConfig.getElementsByTagName('output')
 if output_array.length > 0:
     output_node = output_array[0]
