@@ -1,5 +1,5 @@
 <time_history_plot>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/df/df.xml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/df/df.ddml"/>
   <time_scale scale="weeks"/>
   <time_range type="latest" duration="2"/>
   <plot x="time" y="work size" scale="9.31e-10" key="total size (TB)"/>
