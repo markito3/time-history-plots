@@ -1,5 +1,5 @@
 <time_history_plot>
-  <input_data_spec file="mysql.xml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/mysql/mysql.ddml"/>
   <time_scale scale="hours"/>
   <time_range type="latest" duration="24"/>
   <plot x="time" y="hallddb"/>

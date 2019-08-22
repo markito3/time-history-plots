@@ -1,7 +1,7 @@
 #!/bin/bash
 time=`date +%s`
 jsout=/tmp/jobstat_output.txt
-jobstat_data_file=/work/halld/home/marki/jobstat.txt
+jobstat_data_file=/group/halld/dplot_data/jobstat.txt
 rm -f $jsout
 /site/bin/jobstat | grep -v JOB_ID > $jsout
 total=`grep ' R ' $jsout | wc -l`
