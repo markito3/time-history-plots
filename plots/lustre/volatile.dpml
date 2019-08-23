@@ -1,7 +1,9 @@
 <time_history_plot>
   <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.ddml"/>
-  <time_scale scale="hours"/>
-  <time_range type="latest" duration="3"/>
-  <plot x="time" y="volatile cached" scale="9.09495e-13" key="volatile used (TB)"/>
+  <time_scale scale="weeks"/>
+  <time_range type="latest" duration="1"/>
+  <plot x="time" y="volatile reserved" scale="9.76563e-4" key="reserved (TB)"/>
+  <plot x="time" y="volatile quota" scale="9.76563e-4" key="quota (TB)"/>
+  <plot x="time" y="volatile cached" scale="9.09495e-13" key="used (TB)"/>
   <time_zone offset="-04:00"/>
 </time_history_plot>
