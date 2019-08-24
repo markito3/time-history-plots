@@ -7,10 +7,8 @@ html_line="<tr><td>${tag}</td>"
 for i in `seq 0 3`
 do
     # make plot
-    echo ${durations[$i]} ${scales[$i]}
     output_file=${tag}_${i}.png
     thumbnail_file=${tag}_${i}_thumb.png
-    echo $template $output_file
     cat $template \
 	| sed -e "s/dummy_scale/${scales[$i]}/" \
 	| sed -e "s/dummy_duration/${durations[$i]}/" \
