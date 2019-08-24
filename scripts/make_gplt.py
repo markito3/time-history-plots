@@ -65,7 +65,7 @@ if len(time_zone_array) > 0:
     elif sign == '-':
         sign_factor = -1
     else:
-        sys.exit('time zone not well-formed, "-05:00" is an example of a good one')
+        sys.exit('time zone not well-formed, "-05:00" for EST is an example of a good one')
     hours = float(offset[1:3])
     minutes = float(offset[4:6])
     offset_seconds = sign_factor*60*(60*hours + minutes)
@@ -75,7 +75,7 @@ else:
 if title != '':
     print 'set title "' + title + '"' 
 print 'set datafile separator ","'
-print 'set key box'
+print 'set key box top left'
 print 'set grid'
 print 'set xdata time'
 print 'set timefmt "%s"'
