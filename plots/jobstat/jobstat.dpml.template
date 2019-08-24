@@ -1,0 +1,14 @@
+<time_history_plot>
+  <title>Running JLab Farm Jobs</title>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/jobstat/jobstat.ddml"/>
+  <time_scale scale="dummy_scale"/>
+  <time_range type="latest" duration="dummy_duration"/>
+  <time_zone offset="-04:00"/>
+  <plot x="time" y="total"/>
+  <plot x="time" y="production"/>
+  <plot x="time" y="general"/>
+  <plot x="time" y="priority"/>
+  <plot x="time" y="all gxproj"/>
+  <plot x="time" y="halld users"/>
+  <output type="png" file="dummy_file"/>
+</time_history_plot>

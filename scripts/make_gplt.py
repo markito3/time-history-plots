@@ -2,7 +2,6 @@
 
 import sys
 import time
-from xml.dom.minidom import parse
 import xml.dom.minidom
 import os.path
 
@@ -38,6 +37,11 @@ def get_data_specs():
 
 DOMTreePlot = xml.dom.minidom.parse(configFile)
 plotConfig = DOMTreePlot.documentElement
+title = ''
+title_array = plotConfig.getElementsByTagName('title')
+if title_array.length > 0:
+    title_element = title_array[0]
+    title = title_element.firstChild.nodeValue
 input_data_spec_array = plotConfig.getElementsByTagName('input_data_spec')
 input_data_spec = input_data_spec_array[0] # first one and first one only
 input_data_spec_file = input_data_spec.getAttribute('file')
@@ -68,6 +72,8 @@ if len(time_zone_array) > 0:
 else:
     offset_seconds = 0
 
+if title != '':
+    print 'set title "' + title + '"' 
 print 'set datafile separator ","'
 print 'set key box'
 print 'set grid'
@@ -84,7 +90,7 @@ elif scale == 'hours':
     print 'set format x "%H:%M"'
 elif scale == 'days':
     tu = 24*60*60
-    print 'set format x "%d %Hh"'
+    print 'set format x "%d %H:%M"'
 elif scale == 'weeks':
     tu = 7*24*60*60
     print 'set format x "%m/%d"'

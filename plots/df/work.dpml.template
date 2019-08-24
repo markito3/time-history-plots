@@ -1,0 +1,11 @@
+<time_history_plot>
+  <title>Hall D Work Disk Usage (/work/halld) </title>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/df/df.ddml"/>
+  <time_scale scale="dummy_scale"/>
+  <time_range type="latest" duration="dummy_duration"/>
+  <plot x="time" y="work size" scale="9.31e-10" key="total size (TB)"/>
+  <plot x="time" y="work used" scale="9.31e-10" key="used (TB)"/>
+  <plot x="time" y="work avail" scale="9.31e-10" key="free (TB)"/>
+  <time_zone offset="-04:00"/>
+  <output type="png" file="dummy_file"/>
+</time_history_plot>
