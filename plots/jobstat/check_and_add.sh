@@ -5,7 +5,7 @@ then
     echo blank user, exiting
     exit 1
 fi
-known_users=/home/marki/known_users.txt
+known_users=/group/halld/time_history_data/known_users.txt
 grep -q $newuser $known_users
 status_grep=$?
 if [ $status_grep == 0 ]
