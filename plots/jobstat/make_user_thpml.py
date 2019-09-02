@@ -4,8 +4,8 @@ import subprocess
 print("""\
 <time_history_plot>
   <input_data_spec file="user_jobs.thdml"/>
-  <time_scale scale="hours"/>
-  <time_range type="latest" duration="4"/>
+  <time_scale scale="dummy_scale"/>
+  <time_range type="latest" duration="dummy_duration"/>
   <time_zone offset="-04:00"/>""")
 
 
@@ -13,17 +13,18 @@ with open('known_users.txt') as ku:
     users = ku.readlines()
 users = [x.strip() for x in users]
 
-lastLineOutput = subprocess.Popen(['tail', '-1', '/home/marki/google_drive/scratch/user_jobs.txt'],stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+lastLineOutput = subprocess.Popen(['tail', '-1', '/group/halld/time_history_data/user_jobs.txt'],stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 stdout,stderr = lastLineOutput.communicate()
 lastLine = stdout.rstrip()
+#print('lastLine =', lastLine)
 counts = lastLine.split(',')
 i = 1
 while i < len(counts):
     totalJobs = int(counts[i])
+    #print('total jobs =', totalJobs)
     if totalJobs > 10:
         userIndex = (i - 1)/2 
         print('  <plot x="time" y="' + users[userIndex] + ' running"/>')
     i += 2
 print("""\
-</time_history_plot>
-""")
+</time_history_plot>""")
