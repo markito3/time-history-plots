@@ -27,4 +27,6 @@ while i < len(counts):
         print('  <plot x="time" y="' + users[userIndex] + ' running"/>')
     i += 2
 print("""\
+  <time_zone offset="-04:00"/>
+  <output type="png" file="dummy_file"/>
 </time_history_plot>""")
