@@ -3,7 +3,7 @@ import subprocess
 
 print("""\
 <time_history_plot>
-  <input_data_spec file="user_jobs.thdml"/>
+  <input_data_spec file="/group/halld/time_history_data/user_jobs.thdml"/>
   <time_scale scale="dummy_scale"/>
   <time_range type="latest" duration="dummy_duration"/>
   <time_zone offset="-04:00"/>""")
