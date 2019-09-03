@@ -1,6 +1,8 @@
 #!/bin/bash
-date=`date +%N`
-gplt_file=/tmp/${USER}_${date}.gplt
+date=`date +%s.%N`
+gplt_dir=/tmp/gplt_${USER}
+mkdir -p $gplt_dir
+gplt_file=$gplt_dir/${date}.gplt
 if [ $1 == '-b' ]
 then
     arg='-b'
