@@ -13,6 +13,9 @@ cat > header.html <<EOF
 <h3>Time Histories, updated $date</h3>
 <p>Click on thumbnails for full-size plots.</p>
 <table border>
+EOF
+rm -f header_row.html
+cat > header_row.html <<EOF
 <tr><th>System</th><th>Two Hours</th><th>One Day</th><th>Two Weeks</th><th>Six Months</th></tr>
 EOF
 make_eight.sh group_disk $THP/plots/df/group.dpml.template
@@ -29,4 +32,4 @@ cat > footer.html <<EOF
 </html>
 EOF
 rm -f $html_file
-cat header.html group_disk.html work_disk.html cache_disk.html volatile_disk.html farm_jobs.html user_jobs.html mysql_servers.html footer.html > $html_file
+cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html farm_jobs.html user_jobs.html mysql_servers.html footer.html > $html_file
