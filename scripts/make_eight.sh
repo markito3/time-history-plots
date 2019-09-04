@@ -13,8 +13,8 @@ do
 	| sed -e "s/dummy_scale/${scales[$i]}/" \
 	| sed -e "s/dummy_duration/${durations[$i]}/" \
 	| sed -e "s/dummy_file/$output_file/" \
-	> this.dpml
-    thplot.sh -b this.dpml
+	> this.thpml
+    thplot.sh -b this.thpml
     # make thumbnail
     convert -thumbnail 200 $output_file $thumbnail_file
     html_line=${html_line}"<td><a href=\"$output_file\"><img src=\"$thumbnail_file\"></a></td>"
