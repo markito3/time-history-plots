@@ -1,6 +1,6 @@
 <time_history_plot>
   <title>Running JLab Farm Jobs</title>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/jobstat/jobstat.ddml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/jobstat/jobstat.thdml"/>
   <time_scale scale="dummy_scale"/>
   <time_range type="latest" duration="dummy_duration"/>
   <time_zone offset="-04:00"/>

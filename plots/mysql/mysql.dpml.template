@@ -1,6 +1,6 @@
 <time_history_plot>
   <title>Hall D Database Servers: Number of Connections</title>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/mysql/mysql.ddml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/mysql/mysql.thdml"/>
   <time_scale scale="dummy_scale"/>
   <time_range type="latest" duration="dummy_duration"/>
   <plot x="time" y="hallddb"/>

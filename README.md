@@ -1,5 +1,5 @@
 # time-history-plots
 plots of time history
 
-*.ddml: data definition files
+*.thdml: data definition files
 *.dpml: plot configuration files

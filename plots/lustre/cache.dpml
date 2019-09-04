@@ -1,5 +1,5 @@
 <time_history_plot>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.ddml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.thdml"/>
   <time_scale scale="weeks"/>
   <time_range type="latest" duration="1"/>
   <plot x="time" y="cache reserved" scale="9.76563e-4" key="reserved (TB)"/>

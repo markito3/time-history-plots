@@ -1,6 +1,6 @@
 <time_history_plot>
   <title>Hall D Cache Disk Usage (/cache/halld)</title>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.ddml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.thdml"/>
   <time_scale scale="dummy_scale"/>
   <time_range type="latest" duration="dummy_duration"/>
   <plot x="time" y="cache reserved" scale="9.76563e-4" key="reserved (TB)"/>

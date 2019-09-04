@@ -1,5 +1,5 @@
 <time_history_plot>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/free/free.ddml"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/free/free.thdml"/>
   <time_scale scale="days"/>
   <time_range type="latest" duration="7"/>
   <plot x="time" y="swap used"/>
