@@ -31,6 +31,6 @@ line = result[0];
 for x in line:
   data_line += ',' + str(x)
 
-file_out = open("/group/halld/dplot_data/lustre.txt", "a+")
+file_out = open("/group/halld/time_history_data/lustre.txt", "a+")
 file_out.write("%s\n" % data_line)
 file_out.close()
