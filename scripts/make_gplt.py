@@ -55,6 +55,7 @@ range_type = tr_element.getAttribute('type')
 range_offset_raw = tr_element.getAttribute('offset')
 duration = float(tr_element.getAttribute('duration'))
 time_zone_array = plotConfig.getElementsByTagName('time_zone')
+logy_array = plotConfig.getElementsByTagName('logy')
 
 if len(time_zone_array) > 0:
     time_zone = time_zone_array[0]
@@ -114,6 +115,9 @@ elif range_type == 'end':
 else:
     sys.exit('bad range type')
 print 'set xrange ["' + str(time_start) + '":"' + str(time_end) + '"]'
+
+if logy_array.length > 0:
+    print('set logscale y')
 
 plotCommand =  'plot '
 plot_array = plotConfig.getElementsByTagName('plot')
