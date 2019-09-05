@@ -1,5 +1,5 @@
 <time_history_plot>
-  <input_data file="/group/halld/dplot_data/mysql.txt"/>
+  <input_data file="/group/halld/time_history_data/mysql.txt"/>
   <columns>
     <column name="time" position="1"/>
     <column name="hallddb" position="2"/>

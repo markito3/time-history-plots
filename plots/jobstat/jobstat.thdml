@@ -1,5 +1,5 @@
 <time_history_data>
-  <input_data file="/group/halld/dplot_data/jobstat.txt"/>
+  <input_data file="/group/halld/time_history_data/jobstat.txt"/>
   <columns>
     <column name="time" position="1"/>
     <column name="total" position="2"/>

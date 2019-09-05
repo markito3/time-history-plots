@@ -18,13 +18,13 @@ rm -f header_row.html
 cat > header_row.html <<EOF
 <tr><th>System</th><th>Two Hours</th><th>One Day</th><th>Two Weeks</th><th>Six Months</th></tr>
 EOF
-make_eight.sh group_disk $THP/plots/df/group.dpml.template
-make_eight.sh work_disk $THP/plots/df/work.dpml.template
-make_eight.sh cache_disk $THP/plots/lustre/cache.dpml.template
-make_eight.sh volatile_disk $THP/plots/lustre/volatile.dpml.template
-make_eight.sh farm_jobs $THP/plots/jobstat/jobstat.dpml.template
+make_eight.sh group_disk $THP/plots/df/group.thpml.template
+make_eight.sh work_disk $THP/plots/df/work.thpml.template
+make_eight.sh cache_disk $THP/plots/lustre/cache.thpml.template
+make_eight.sh volatile_disk $THP/plots/lustre/volatile.thpml.template
+make_eight.sh farm_jobs $THP/plots/jobstat/jobstat.thpml.template
 make_eight.sh user_jobs /group/halld/time_history_data/user_jobs.thpml.template
-make_eight.sh mysql_servers $THP/plots/mysql/mysql.dpml.template
+make_eight.sh mysql_servers $THP/plots/mysql/mysql.thpml.template
 rm -f footer.html
 cat > footer.html <<EOF
 </table>

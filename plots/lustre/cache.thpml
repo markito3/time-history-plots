@@ -1,13 +1,11 @@
 <time_history_plot>
-  <title>Hall D Cache Disk Usage (/cache/halld)</title>
-  <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.ddml"/>
-  <time_scale scale="dummy_scale"/>
-  <time_range type="latest" duration="dummy_duration"/>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/lustre/lustre.thdml"/>
+  <time_scale scale="weeks"/>
+  <time_range type="latest" duration="1"/>
   <plot x="time" y="cache reserved" scale="9.76563e-4" key="reserved (TB)"/>
   <plot x="time" y="cache quota" scale="9.76563e-4" key="quota (TB)"/>
   <plot x="time" y="cache cached" scale="9.09495e-13" key="used (TB)"/>
   <plot x="time" y="cache pin_quota" scale="9.76563e-4" key="pin_quota (TB)"/>
   <plot x="time" y="cache pinned" scale="9.09495e-13" key="pinned (TB)"/>
   <time_zone offset="-04:00"/>
-  <output type="png" file="dummy_file"/>
 </time_history_plot>
