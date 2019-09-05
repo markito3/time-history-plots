@@ -10,5 +10,6 @@
   <plot x="time" y="priority"/>
   <plot x="time" y="all gxproj"/>
   <plot x="time" y="halld users"/>
+  <logy/>
   <output type="png" file="dummy_file"/>
 </time_history_plot>
