@@ -1,6 +1,6 @@
 #!/bin/bash
 time=`date +%s`
-jsout=/tmp/jobstat_output.txt
+jsout=/tmp/jobstat_output_${USER}.txt
 jobstat_data_file=/group/halld/time_history_data/jobstat.txt
 rm -f $jsout
 /site/bin/jobstat | grep -v JOB_ID > $jsout
