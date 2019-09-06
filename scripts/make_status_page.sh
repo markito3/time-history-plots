@@ -25,9 +25,12 @@ make_eight.sh volatile_disk $THP/plots/lustre/volatile.thpml.template
 make_eight.sh farm_jobs $THP/plots/jobstat/jobstat.thpml.template
 make_eight.sh user_jobs /group/halld/time_history_data/user_jobs.thpml.template
 make_eight.sh mysql_servers $THP/plots/mysql/mysql.thpml.template
+time=`date +%s`
 rm -f footer.html
 cat > footer.html <<EOF
 </table>
+<h3>Work Disk Server Load</h3>
+<a href="https://lqcd.jlab.org/ganglia/?c=Disk%20Servers&h=scifs1701.jlab.org&m=load_one&r=hour&s=descending&hc=4&mc=2"><img src="https://lqcd.jlab.org/ganglia/graph.php?g=load_report&z=medium&c=Disk%20Servers&h=scifs1701.jlab.org&m=load_one&r=hour&s=descending&hc=4&mc=2&st$time"/></a>
 </body>
 </html>
 EOF
