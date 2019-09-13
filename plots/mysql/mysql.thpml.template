@@ -7,6 +7,8 @@
   <plot x="time" y="ccdb"/>
   <plot x="time" y="hallddb-ext"/>
   <plot x="time" y="halldweb"/>
+  <plot x="time" y="hallddb-a"/>
+  <plot x="time" y="hallddb-b"/>
   <time_zone offset="-04:00"/>
   <output type="png" file="dummy_file"/>
 </time_history_plot>
