@@ -1,7 +1,7 @@
 #!/bin/bash
 time=`date +%s`
 dataline=$time
-jsfile=/tmp/jobstat_for_user_jobs.txt
+jsfile=/tmp/jobstat_for_user_jobs_${USER}.txt
 rm -f $jsfile
 jobstat > $jsfile
 while read -r user
