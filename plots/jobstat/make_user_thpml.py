@@ -22,7 +22,7 @@ i = 1
 while i < len(counts):
     totalJobs = int(counts[i])
     runningJobs = int(counts[i + 1])
-    if totalJobs > 1000 or runningJobs > 10:
+    if totalJobs > 100 or runningJobs > 1:
         userIndex = (i - 1)/2 
         print('  <plot x="time" y="' + users[userIndex] + ' running"/>')
     i += 2
