@@ -6,5 +6,13 @@
   Double_t mean = x_mass_hist->GetMean(1);
   Double_t sigma = x_mass_hist->GetMean(11);
   Double_t rms = x_mass_hist->GetStdDev(1);
-  cout << "entries=" << entries << "," << "mean=" << mean << "," << "sigma=" << sigma << "," << "rms=" << rms << endl;
+  cout << "time_history,entries=" << entries << "," << "mean=" << mean << "," << "sigma=" << sigma << "," << "rms=" << rms << endl;
+  // call a function
+  Int_t value = func("/hd_root.root");
+}
+
+Int_t func(string rootfile) {
+  cout << "rootfile=" << rootfile << endl;
+  Int_t status = 0;
+  return status;
 }
