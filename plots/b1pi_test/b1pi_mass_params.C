@@ -13,8 +13,12 @@ void print_params(TFile *file, string histname) {
   cout << "hist_params:" << histname << ",entries=" << entries << "," << "mean=" << mean << "," << "sigma=" << sigma << "," << "rms=" << rms << endl;
 }
 
-void b1pi_mass_params() {
-  TFile *F1 = new TFile("/scratch/gluex/b1pi/2019-09-19/Linux_RHEL7-x86_64-gcc4.8.5/11366/hd_root.root");
+void b1pi_mass_params(string date) {
+  cout << "got to here" << endl;
+  cout << "date = " << date << endl;
+  string filename = "/scratch/gluex/b1pi/" + date + "/Linux_RHEL7-x86_64-gcc4.8.5/11366/hd_root.root";
+  cout << "filename = " << filename << endl;
+  TFile *F1 = new TFile(filename.c_str());
   print_params(F1, "b1pi/Hist_InvariantMass_Pi0_PostKinFit/InvariantMass");
   print_params(F1, "b1pi/Hist_InvariantMass_omega_PostKinFit/InvariantMass");
   print_params(F1, "b1pi/Custom_HistMass_b1_1235/InvariantMass");
