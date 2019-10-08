@@ -10,5 +10,6 @@
   <plot x="time" y="hallddb-a"/>
   <plot x="time" y="hallddb-b"/>
   <time_zone offset="-04:00"/>
+  <logy/>
   <output type="png" file="dummy_file"/>
 </time_history_plot>
