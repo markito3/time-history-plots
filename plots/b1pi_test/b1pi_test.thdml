@@ -1,0 +1,22 @@
+<time_history_data>
+  <input_data file="/group/halld/time_history_data/b1pi_test.txt"/>
+  <columns>
+    <column name="time" position="1"/>
+    <column name="pi0 entries" position="2"/>
+    <column name="pi0 mean" position="3"/>
+    <column name="pi0 sigma mean" position="4"/>
+    <column name="pi0 rms" position="5"/>
+    <column name="omega entries" position="6"/>
+    <column name="omega mean" position="7"/>
+    <column name="omega sigma mean" position="8"/>
+    <column name="omega rms" position="9"/>
+    <column name="b1 entries" position="10"/>
+    <column name="b1 mean" position="11"/>
+    <column name="b1 sigma mean" position="12"/>
+    <column name="b1 rms" position="13"/>
+    <column name="X entries" position="14"/>
+    <column name="X mean" position="15"/>
+    <column name="X sigma mean" position="16"/>
+    <column name="X rms" position="17"/>
+  </columns>
+</time_history_data>
