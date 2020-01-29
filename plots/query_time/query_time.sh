@@ -1,6 +1,6 @@
 #!/bin/bash
-. /home/marki/marki/timer2.sh
-t0=$(timer2)
+. /home/marki/bin/timer.sh
+t0=$(timer)
 mysql -hhallddb-farm -uccdb_user ccdb < query_multiple.sql > /dev/null
-delta_t=$(timer2 -u seconds $t0)
+delta_t=$(timer -u seconds $t0)
 echo $t0, $delta_t
