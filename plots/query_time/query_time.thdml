@@ -1,0 +1,7 @@
+<time_history_plot>
+  <input_data file="/group/halld/time_history_data/query_time2.txt"/>
+  <columns>
+    <column name="time" position="1"/>
+    <column name="query_time" position="2"/>
+  </columns>
+</time_history_plot>
