@@ -4,11 +4,13 @@
   <time_scale scale="dummy_scale"/>
   <time_range type="latest" duration="dummy_duration"/>
   <plot x="time" y="hallddb"/>
-  <plot x="time" y="ccdb"/>
+  <plot x="time" y="hallddb_ccdb_only"/>
   <plot x="time" y="hallddb-ext"/>
   <plot x="time" y="halldweb"/>
   <plot x="time" y="hallddb-a"/>
   <plot x="time" y="hallddb-b"/>
+  <plot x="time" y="hallddb-c"/>
+  <plot x="time" y="hallddb-d"/>
   <time_zone offset="-04:00"/>
   <logy/>
   <output type="png" file="dummy_file"/>
