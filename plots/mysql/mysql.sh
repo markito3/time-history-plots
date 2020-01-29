@@ -8,4 +8,4 @@ hallddb_a=`mysql -B -N -hhallddb-a -umarki -phybrid information_schema -e 'selec
 hallddb_b=`mysql -B -N -hhallddb-b -umarki -phybrid information_schema -e 'select count(*) from processlist'`
 hallddb_c=`mysql -B -N -hhallddb-c -umarki -phybrid information_schema -e 'select count(*) from processlist'`
 hallddb_d=`mysql -B -N -hhallddb-d -umarki -phybrid information_schema -e 'select count(*) from processlist'`
-echo $date,$hallddb,$ccdb_farm,$hallddb_ext,$halldweb,$hallddb_a,$hallddb_b,$hallddb_c,$hallddb_d # >> /group/halld/time_history_data/mysql.txt
+echo $date,$hallddb,$ccdb_farm,$hallddb_ext,$halldweb,$hallddb_a,$hallddb_b,$hallddb_c,$hallddb_d >> /group/halld/time_history_data/mysql.txt
