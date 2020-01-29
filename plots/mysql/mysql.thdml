@@ -3,10 +3,12 @@
   <columns>
     <column name="time" position="1"/>
     <column name="hallddb" position="2"/>
-    <column name="ccdb" position="3"/>
+    <column name="hallddb_ccdb_only" position="3"/>
     <column name="hallddb-ext" position="4"/>
     <column name="halldweb" position="5"/>
     <column name="hallddb-a" position="6"/>
     <column name="hallddb-b" position="7"/>
+    <column name="hallddb-c" position="8"/>
+    <column name="hallddb-d" position="9"/>
   </columns>
 </time_history_plot>
