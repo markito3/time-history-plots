@@ -6,7 +6,7 @@ print("""\
   <input_data_spec file="/group/halld/time_history_data/user_jobs.thdml"/>
   <time_scale scale="dummy_scale"/>
   <time_range type="latest" duration="dummy_duration"/>
-  <time_zone offset="-04:00"/>""")
+  <time_zone offset="-05:00"/>""")
 
 
 with open('known_users.txt') as ku:
@@ -27,7 +27,7 @@ while i < len(counts):
         print('  <plot x="time" y="' + users[userIndex] + ' running"/>')
     i += 2
 print("""\
-  <time_zone offset="-04:00"/>
+  <time_zone offset="-05:00"/>
   <logy/>
   <output type="png" file="dummy_file"/>
 </time_history_plot>""")

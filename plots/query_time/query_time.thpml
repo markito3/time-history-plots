@@ -1,8 +1,9 @@
 <time_history_plot>
   <input_data_spec file="/home/marki/time-history-plots/plots/query_time/query_time.thdml"/>
   <time_scale scale="hours"/>
-  <time_range type="latest" duration="8"/>
+  <time_range type="latest" duration="6"/>
   <logy/>
   <plot x="time" y="query_time"/>
   <time_zone offset="-05:00"/>
+  <output type="png" file="query_time.png"/>
 </time_history_plot>
