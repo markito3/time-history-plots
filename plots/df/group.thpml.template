@@ -6,6 +6,6 @@
   <plot x="time" y="group size" scale="9.31e-10" key="total size (TB)"/>
   <plot x="time" y="group used" scale="9.31e-10" key="used (TB)"/>
   <plot x="time" y="group avail" scale="9.31e-10" key="free (TB)"/>
-  <time_zone offset="-04:00"/>
+  <time_zone offset="-05:00"/>
   <output type="png" file="dummy_file"/>
 </time_history_plot>

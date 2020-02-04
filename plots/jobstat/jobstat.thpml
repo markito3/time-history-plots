@@ -2,7 +2,7 @@
   <input_data_spec file="/group/halld/Software/time-history-plots/plots/jobstat/jobstat.thdml"/>
   <time_scale scale="days"/>
   <time_range type="latest" duration="3"/>
-  <time_zone offset="-04:00"/>
+  <time_zone offset="-05:00"/>
   <plot x="time" y="total"/>
   <plot x="time" y="production"/>
   <plot x="time" y="general"/>

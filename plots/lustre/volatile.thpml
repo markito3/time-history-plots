@@ -5,5 +5,5 @@
   <plot x="time" y="volatile reserved" scale="9.76563e-4" key="reserved (TB)"/>
   <plot x="time" y="volatile quota" scale="9.76563e-4" key="quota (TB)"/>
   <plot x="time" y="volatile cached" scale="9.09495e-13" key="used (TB)"/>
-  <time_zone offset="-04:00"/>
+  <time_zone offset="-05:00"/>
 </time_history_plot>
