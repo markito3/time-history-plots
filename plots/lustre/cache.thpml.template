@@ -9,5 +9,5 @@
   <plot x="time" y="cache pin_quota" scale="9.76563e-4" key="pin_quota (TB)"/>
   <plot x="time" y="cache pinned" scale="9.09495e-13" key="pinned (TB)"/>
   <time_zone offset="-05:00"/>
-  <output type="png" file="dummy_file"/>
+  <output type="png" size="1024,720" file="dummy_file"/>
 </time_history_plot>
