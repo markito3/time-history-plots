@@ -146,6 +146,10 @@ if output_array.length > 0:
     output_node = output_array[0]
     output_type = output_node.getAttribute('type')
     output_file = output_node.getAttribute('file')
-    print 'set term ' + output_type
+    output_size = output_node.getAttribute('size')
+    setTermCommand = 'set term ' + output_type
+    if len(output_size) > 0:
+        setTermCommand += ' size ' + output_size
+    print setTermCommand
     print 'set output \'' + output_file + '\''
     print plotCommand
