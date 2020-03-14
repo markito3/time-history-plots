@@ -11,5 +11,5 @@
   <plot x="time" y="all gxproj"/>
   <plot x="time" y="halld users"/>
   <logy/>
-  <output type="png" file="dummy_file"/>
+  <output type="png" size="1024,720" file="dummy_file"/>
 </time_history_plot>

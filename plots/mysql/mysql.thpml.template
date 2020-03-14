@@ -13,5 +13,5 @@
   <plot x="time" y="hallddb-d"/>
   <time_zone offset="-05:00"/>
   <logy/>
-  <output type="png" file="dummy_file"/>
+  <output type="png" file="dummy_file" size="1024,720"/>
 </time_history_plot>

@@ -29,5 +29,5 @@ while i < len(counts):
 print("""\
   <time_zone offset="-05:00"/>
   <logy/>
-  <output type="png" file="dummy_file"/>
+  <output type="png" size="1024,720" file="dummy_file"/>
 </time_history_plot>""")
