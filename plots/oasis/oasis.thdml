@@ -1,0 +1,7 @@
+<time_history_data>
+  <input_data file="/group/halld/time_history_data/oasis.txt"/>
+  <columns>
+    <column name="time" position="1"/>
+    <column name="oasis size (GB)" position="2"/>
+  </columns>
+</time_history_data>
