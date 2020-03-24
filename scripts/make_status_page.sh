@@ -22,6 +22,7 @@ make_eight.sh group_disk $THP/plots/df/group.thpml.template
 make_eight.sh work_disk $THP/plots/df/work.thpml.template
 make_eight.sh cache_disk $THP/plots/lustre/cache.thpml.template
 make_eight.sh volatile_disk $THP/plots/lustre/volatile.thpml.template
+make_eight.sh oasis_disk  $THP/plots/oasis/oasis.thpml.template
 make_eight.sh farm_jobs $THP/plots/jobstat/jobstat.thpml.template
 make_eight.sh user_jobs /group/halld/time_history_data/user_jobs.thpml.template
 make_eight.sh mysql_servers $THP/plots/mysql/mysql.thpml.template
@@ -35,4 +36,4 @@ cat > footer.html <<EOF
 </html>
 EOF
 rm -f $html_file
-cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html farm_jobs.html user_jobs.html mysql_servers.html footer.html > $html_file
+cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html footer.html > $html_file
