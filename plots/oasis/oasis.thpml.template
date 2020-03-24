@@ -1,0 +1,9 @@
+<time_history_plot>
+  <title> GlueX Oasis Disk Usage</title>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/oasis/oasis.thdml"/>
+  <time_scale scale="dummy_scale"/>
+  <time_range type="latest" duration="dummy_duration"/>
+  <plot x="time" y="oasis size (GB)"/>
+  <time_zone offset="-04:00"/>
+  <output type="png" size="1024,720" file="dummy_file"/>
+</time_history_plot>
