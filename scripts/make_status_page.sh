@@ -30,6 +30,7 @@ time=`date +%s`
 rm -f end_table.html
 cat > end_table.html <<EOF
 </table>
+<h3>b<sub>1</sub>&pi; Test</h3>
 EOF
 make_two.sh b1pi_test $THP/plots/b1pi_test/b1pi_test.thpml
 rm -f footer.html
