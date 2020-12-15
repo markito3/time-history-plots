@@ -43,4 +43,4 @@ cat > footer.html <<EOF
 </html>
 EOF
 rm -f $html_file
-cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html end_table.html b1pi_test.html footer.html > $html_file
+cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html end_table.html b1pi_mean.html b1pi_entries.html b1pi_rms.html footer.html > $html_file
