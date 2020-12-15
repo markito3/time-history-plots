@@ -1,0 +1,11 @@
+<time_history_plot>
+  <input_data_spec file="/group/halld/Software/time-history-plots/plots/b1pi_test/b1pi_test.thdml"/>
+  <time_scale scale="months"/>
+  <time_range type="latest" duration="4"/>
+  <plot x="time" y="pi0 entries"/>
+  <plot x="time" y="omega entries"/>
+  <plot x="time" y="b1 entries"/>
+  <plot x="time" y="X entries"/>
+  <time_zone offset="-05:00"/>
+  <output type="png" size="1024,720" file="b1pi_entries.png"/>
+</time_history_plot>

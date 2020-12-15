@@ -7,5 +7,5 @@
   <plot x="time" y="b1 mean"/>
   <plot x="time" y="X mean"/>
   <time_zone offset="-05:00"/>
-  <output type="png" size="1024,720" file="b1pi_test.png"/>
+  <output type="png" size="1024,720" file="b1pi_mean.png"/>
 </time_history_plot>

@@ -32,7 +32,9 @@ cat > end_table.html <<EOF
 </table>
 <h3>b<sub>1</sub>&pi; Test</h3>
 EOF
-make_two.sh b1pi_test $THP/plots/b1pi_test/b1pi_test.thpml
+make_two.sh b1pi_mean $THP/plots/b1pi_test/b1pi_mean.thpml
+make_two.sh b1pi_entries $THP/plots/b1pi_test/b1pi_entries.thpml
+make_two.sh b1pi_rms $THP/plots/b1pi_test/b1pi_rms.thpml
 rm -f footer.html
 cat > footer.html <<EOF
 <h3>Work Disk Server Load</h3>
@@ -41,4 +43,4 @@ cat > footer.html <<EOF
 </html>
 EOF
 rm -f $html_file
-cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html end_table.html b1pi_test.html footer.html > $html_file
+cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html end_table.html b1pi_mean.html b1pi_entries.html b1pi_rms.html footer.html > $html_file
