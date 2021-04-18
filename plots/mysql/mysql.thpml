@@ -11,5 +11,5 @@
   <plot x="time" y="hallddb-b"/>
   <plot x="time" y="hallddb-c"/>
   <plot x="time" y="hallddb-d"/>
-  <time_zone offset="-05:00"/>
+  <time_zone offset="-04:00"/>
 </time_history_plot>
