@@ -1,7 +1,7 @@
 #!/bin/bash
 tag=$1
 template=$2
-durations=(1 2 6 5)
+durations=(1 2 6 2)
 scales=("days" "weeks" "months" "years")
 html_line="<tr><td>${tag}</td>"
 for i in `seq 0 3`

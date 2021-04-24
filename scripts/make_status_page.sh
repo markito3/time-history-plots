@@ -16,7 +16,7 @@ cat > header.html <<EOF
 EOF
 rm -f header_row.html
 cat > header_row.html <<EOF
-<tr><th>System</th><th>One Day</th><th>Two Weeks</th><th>Six Months</th><th>Five Years</th></tr>
+<tr><th>System</th><th>One Day</th><th>Two Weeks</th><th>Six Months</th><th>Two Years</th></tr>
 EOF
 make_eight.sh group_disk $THP/plots/df/group.thpml.template
 make_eight.sh work_disk $THP/plots/df/work.thpml.template
