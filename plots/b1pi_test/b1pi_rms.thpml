@@ -6,6 +6,6 @@
   <plot x="time" y="omega rms"/>
   <plot x="time" y="b1 rms"/>
   <plot x="time" y="X rms"/>
-  <time_zone offset="-05:00"/>
+  <time_zone offset="-04:00"/>
   <output type="png" size="1024,720" file="b1pi_rms.png"/>
 </time_history_plot>

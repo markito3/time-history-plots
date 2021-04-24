@@ -6,6 +6,6 @@
   <plot x="time" y="work size" scale="9.31e-10" key="total size (TB)"/>
   <plot x="time" y="work used" scale="9.31e-10" key="used (TB)"/>
   <plot x="time" y="work avail" scale="9.31e-10" key="free (TB)"/>
-  <time_zone offset="-05:00"/>
+  <time_zone offset="-04:00"/>
   <output type="png" size="1024,720" file="dummy_file"/>
 </time_history_plot>

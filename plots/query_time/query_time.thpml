@@ -4,6 +4,6 @@
   <time_range type="latest" duration="6"/>
   <logy/>
   <plot x="time" y="query_time"/>
-  <time_zone offset="-05:00"/>
+  <time_zone offset="-04:00"/>
   <output type="png" file="query_time.png"/>
 </time_history_plot>

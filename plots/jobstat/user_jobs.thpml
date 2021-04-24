@@ -2,7 +2,7 @@
   <input_data_spec file="/group/halld/time_history_data/user_jobs.thdml"/>
   <time_scale scale="weeks"/>
   <time_range type="latest" duration="1.5"/>
-  <time_zone offset="-05:00"/>
+  <time_zone offset="-04:00"/>
   <plot x="time" y="gxproj1 running"/>
   <plot x="time" y="gxproj2 running"/>
   <plot x="time" y="gxproj3 running"/>
