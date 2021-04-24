@@ -2,11 +2,14 @@
   <input_data file="/group/halld/time_history_data/df.txt"/>
   <columns>
     <column name="time" position="1"/>
-    <column name="group size" position="2"/>
-    <column name="group used" position="3"/>
-    <column name="group avail" position="4"/>
-    <column name="work size" position="5"/>
-    <column name="work used" position="6"/>
-    <column name="work avail" position="7"/>
+    <column name="/group/halld size" position="2"/>
+    <column name="/group/halld used" position="3"/>
+    <column name="/group/halld avail" position="4"/>
+    <column name="/work/halld size" position="5"/>
+    <column name="/work/halld used" position="6"/>
+    <column name="/work/halld avail" position="7"/>
+    <column name="/work/halld3 size" position="8"/>
+    <column name="/work/halld3 used" position="9"/>
+    <column name="/work/halld3 avail" position="10"/>
   </columns>
 </time_history_data>
