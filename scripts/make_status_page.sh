@@ -20,6 +20,7 @@ cat > header_row.html <<EOF
 EOF
 make_eight.sh group_disk $THP/plots/df/group.thpml.template
 make_eight.sh work_disk $THP/plots/df/work.thpml.template
+make_eight.sh work_disk_3 $THP/plots/df/work3.thpml.template
 make_eight.sh cache_disk $THP/plots/lustre/cache.thpml.template
 make_eight.sh volatile_disk $THP/plots/lustre/volatile.thpml.template
 make_eight.sh oasis_disk  $THP/plots/oasis/oasis.thpml.template
