@@ -7,5 +7,5 @@ thpml=$2
     thplot.sh -b $thpml
     # make thumbnail
     convert -thumbnail 200 $output_file $thumbnail_file
-    html_line="<a href=\"$output_file\"><img src=\"$thumbnail_file\">"
+    html_line="<a href=\"$output_file\"><img src=\"$thumbnail_file\"></a>"
 echo $html_line > ${tag}.html
