@@ -20,7 +20,6 @@ cat > header_row.html <<EOF
 EOF
 make_eight.sh group_disk $THP/plots/df/group.thpml.template
 make_eight.sh work_disk $THP/plots/df/work.thpml.template
-make_eight.sh work_disk_3 $THP/plots/df/work3.thpml.template
 make_eight.sh cache_disk $THP/plots/lustre/cache.thpml.template
 make_eight.sh volatile_disk $THP/plots/lustre/volatile.thpml.template
 make_eight.sh oasis_disk  $THP/plots/oasis/oasis.thpml.template
@@ -44,4 +43,4 @@ cat > footer.html <<EOF
 </html>
 EOF
 rm -f $html_file
-cat header.html header_row.html group_disk.html work_disk.html work_disk_3.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html end_table.html b1pi_mean.html b1pi_entries.html b1pi_rms.html footer.html > $html_file
+cat header.html header_row.html group_disk.html work_disk.html cache_disk.html volatile_disk.html header_row.html oasis_disk.html farm_jobs.html user_jobs.html mysql_servers.html end_table.html b1pi_mean.html b1pi_entries.html b1pi_rms.html footer.html > $html_file
