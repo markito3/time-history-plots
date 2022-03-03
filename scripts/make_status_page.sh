@@ -26,7 +26,7 @@ make_eight.sh work_disk $THP/plots/df/work.thpml.template
 make_eight.sh cache_disk $THP/plots/lustre/cache.thpml.template
 make_eight.sh volatile_disk $THP/plots/lustre/volatile.thpml.template
 make_eight.sh oasis_disk  $THP/plots/oasis/oasis.thpml.template
-make_eight.sh farm_jobs $THP/plots/jobstat/jobstat.thpml.template
+#make_eight.sh farm_jobs $THP/plots/jobstat/jobstat.thpml.template
 #make_eight.sh user_jobs /group/halld/time_history_data/user_jobs.thpml.template
 make_eight.sh mysql_servers $THP/plots/mysql/mysql.thpml.template
 time=`date +%s`
